@@ -16,6 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper as JsonSlurper
+
 
 'Send request'
 def response = WS.sendRequest(findTestObject('Object Repository/login_user'))
@@ -29,4 +31,7 @@ def jsonResponse = new groovy.json.JsonSlurper().parseText(response.getResponseT
 'Verify token not null'
 if (jsonResponse.token == null) {
     throw new AssertionError('Token tidak ada dalam respons')
+}else {
+	'print token'
+	System.out.println(jsonResponse.token)
 }
