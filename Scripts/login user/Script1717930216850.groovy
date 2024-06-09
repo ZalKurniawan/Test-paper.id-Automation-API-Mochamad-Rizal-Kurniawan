@@ -23,7 +23,7 @@ def response = WS.sendRequest(findTestObject('Object Repository/login_user'))
 'Verify status code'
 WS.verifyResponseStatusCode(response, 200)
 
-'Verify token'
+'parse JSON response'
 def jsonResponse = new groovy.json.JsonSlurper().parseText(response.getResponseText())
 
 'Verify token not null'
