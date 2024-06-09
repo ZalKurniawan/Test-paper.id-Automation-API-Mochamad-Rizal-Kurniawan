@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>simple loadtest login user</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>144f8f32-cea4-4d24-9536-d615471a0f87</testCaseGuid>
+</TestCaseEntity>
